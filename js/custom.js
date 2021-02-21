@@ -3,7 +3,7 @@ let mainDish = document.querySelector("#dish-box>img");
 let dishes = document.querySelectorAll(".dish-image-small");
 let models = document.querySelectorAll(".model-image-small");
 let navbar = document.querySelector(".navbar");
-let navbarCollapseDiv = document.querySelector("nav>div");
+let navbarCollapseDiv = document.getElementById("navbarSupportedContent");
 
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
@@ -38,13 +38,13 @@ lightbox.addEventListener("click", e => {
 
 let prevScrollpos = window.pageYOffset;
 const changeNavBarState = () => {
-  if (navbarCollapseDiv.classList.contains("show")) return;
   const windowHeight = window.innerHeight;
   const currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     navbar.classList.remove("navbar-hide");
     navbar.classList.add("navbar-unhide");
   } else { 
+    if (navbarCollapseDiv.classList.contains("show")) return;
     navbar.classList.remove("navbar-unhide");
     navbar.classList.add("navbar-hide");
   }
