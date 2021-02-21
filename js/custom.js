@@ -3,7 +3,7 @@ let mainDish = document.querySelector("#dish-box>img");
 let dishes = document.querySelectorAll(".dish-image-small");
 let models = document.querySelectorAll(".model-image-small");
 let navbar = document.querySelector(".navbar");
-let navbarButton = document.querySelector("nav>button");
+let navbarCollapseDiv = document.querySelector("nav>div");
 
 const lightbox = document.createElement('div');
 lightbox.id = 'lightbox';
@@ -37,8 +37,8 @@ lightbox.addEventListener("click", e => {
 })
 
 let prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  if (!navbarButton.classList.contains("collapsed")) return;
+const changeNavBarState = () => {
+  if (navbarCollapseDiv.classList.contains("show")) return;
   const windowHeight = window.innerHeight;
   const currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -51,4 +51,4 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-// window.addEventListener("scroll")
+window.addEventListener("scroll", changeNavBarState)
