@@ -1,1 +1,1 @@
-# digusta-website
+The landing page of the DiGuste project
