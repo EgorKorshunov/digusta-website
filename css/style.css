@@ -1,0 +1,224 @@
+
+
+:root {
+    --main-accent-color: #03bad5;
+    --section-title-color-dark: #437474;
+    --body-color: #495057;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2.6rem;
+    line-height: 4rem;
+    font-weight: 800;
+}
+
+/* =============== NAVIGATION =============== */
+
+.navbar{
+    padding-top: 0.6rem;
+    opacity: 70%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color:  #1a1b1b;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .85rem;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #27778b;
+}
+
+.navbar-hide {
+    transform: translateY(-55px);
+    transition: all 0.3s linear;
+}
+
+.navbar-unhide {
+    transform: translateY(0px);
+    transition: all 0.3s linear;
+}
+
+/* #temp-logo {
+    color: #1a1b1b;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+} */
+
+/* =============== ABOUT =============== */
+
+.text-only-container{
+    margin: 2rem 0;
+}
+h3.heading{
+    text-align: center;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1.9rem;
+}
+
+#about-text{
+    text-align: center;
+    margin: 0 10% 1.9rem;
+    font-size: 1.2rem;
+}
+
+/* =============== TOP IMAGE WITH CAPTION =============== */
+
+.home-inner {
+    background-image: url('../img/food1.jfif');
+}
+
+
+
+.caption{
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+}
+
+.caption h3{
+    color: #fff;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.caption p{
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+
+/* =============== MAIN MODEL AND MAP =============== */
+
+.two-layout-image > img{
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+}
+
+.two-layout-text > h3{
+    padding: 0 0 1rem;
+    text-align: center;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+.two-layout-text > p{
+    margin: 0 6rem 2rem;
+    /* padding-top: 1.5rem; */
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+/* =============== SECONDARY MODELS =============== */
+
+.image-box > img{
+    margin: 1rem 0;
+    position: relative;
+}
+
+.card-body > img:hover {
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.card-body > img:active {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+/* =============== LIGHTBOX =============== */
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-model {
+    width: 80%;
+    height: 80%;
+}
+
+/* =============== CONTACT FORM ============ */
+
+.contact-form{
+    margin: 6em 0;
+    position: relative;  
+}
+
+.contact-form h1{
+    padding:2em 1px;
+    color: #095486; 
+}
+.contact-form .right{
+    max-width: 600px;
+}
+.contact-form .right .btn-secondary{
+    background:  #095486;
+    color: #fff;
+    border:0;
+}
+.contact-form .right .form-control::placeholder{
+    color: #888;
+    font-size: 16px;
+}
+
+/* =============== EXTRA SETUP =============== */
+
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: table;
+    background: #E9ECEF;
+    z-index: -1;
+  }
+  .home-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .home-inner {
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: transform;
+  }
